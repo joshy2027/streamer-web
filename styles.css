@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.hero {
+  background: #202938;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero nav {
+  margin-top: 15px;
+}
+
+.hero nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: #202938;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #202938;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #202938;
+  color: white;
+  margin-top: 30px;
+}
+
+#loginMessage, #postMessage {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .hero nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
