@@ -7,9 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero gamer-hero">
     <h1>Comunidad Streamer</h1>
     <p>Contenido, comunidad y enlaces para seguir al creador.</p>
+
+    <div class="hero-stats">
+      <div class="stat-box">
+        <span class="stat-number">12.4K</span>
+        <span class="stat-label">Seguidores</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Streams por semana</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Comunidad activa</span>
+      </div>
+    </div>
+
     <nav>
       <a href="index.html">Inicio</a>
       <a href="login.html">Login</a>
@@ -18,11 +34,13 @@
   </header>
 
   <main class="container">
-    <section class="card">
+    <section class="card highlight-card">
       <h2>Perfil del streamer</h2>
       <p><strong>Nombre:</strong> Lexard</p>
       <p><strong>Contenido:</strong> videojuegos, comunidad y directos.</p>
       <p><strong>Horario:</strong> martes, jueves y sábado - 8:00 p.m.</p>
+      <p><strong>Estado actual:</strong> Stream especial de comunidad esta semana.</p>
+      <a class="main-btn" href="https://www.twitch.tv/" target="_blank">Ver stream</a>
     </section>
 
     <section class="card">
@@ -35,8 +53,22 @@
     </section>
 
     <section class="card">
+      <h2>Próximos eventos</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <h3>Stream de comunidad</h3>
+          <p>Sábado - 8:00 p.m.</p>
+        </div>
+        <div class="event-item">
+          <h3>Charla con seguidores</h3>
+          <p>Domingo - 7:00 p.m.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
       <h2>Publicaciones recientes</h2>
-      <ul id="posts">
+      <ul id="posts" class="post-list">
         <li>Nuevo stream programado para este sábado.</li>
         <li>Directo especial de comunidad esta semana.</li>
         <li>Nuevo contenido subido al perfil.</li>

@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel Admin</title>
+  <title>Admin | Comunidad Streamer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero gamer-hero">
     <h1>Panel de administración</h1>
+    <p>Gestiona publicaciones y mantén activa la comunidad.</p>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="login.html">Login</a>
@@ -17,16 +18,50 @@
   </header>
 
   <main class="container">
+    <section class="card admin-summary">
+      <h2>Resumen del panel</h2>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-number" id="totalPosts">0</span>
+          <span class="stat-label">Publicaciones</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">Activo</span>
+          <span class="stat-label">Estado del panel</span>
+        </div>
+      </div>
+    </section>
+
     <section class="card form-card">
       <h2>Agregar publicación</h2>
+      <p class="login-helper">
+        Escribe una actualización para mostrarla dentro de la comunidad.
+      </p>
+
       <form id="postForm">
         <label for="postText">Texto de publicación</label>
-        <textarea id="postText" rows="4" placeholder="Escribe una actualización..."></textarea>
-        <button type="submit">Guardar</button>
+        <textarea
+          id="postText"
+          rows="4"
+          placeholder="Escribe una actualización para tus seguidores..."
+        ></textarea>
+        <button type="submit">Guardar publicación</button>
       </form>
+
       <p id="postMessage"></p>
     </section>
+
+    <section class="card">
+      <h2>Publicaciones guardadas</h2>
+      <div id="adminPosts" class="admin-posts">
+        <p class="empty-posts">Aún no hay publicaciones registradas.</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>Sistema web para gestión de contenido y comunidad de streamers</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

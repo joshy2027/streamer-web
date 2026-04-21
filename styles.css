@@ -5,51 +5,139 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #222;
+  background: linear-gradient(180deg, #12081f 0%, #1c1030 40%, #0f0f1a 100%);
+  color: #f3f3f3;
 }
 
 .hero {
-  background: #202938;
-  color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 36px 20px;
+}
+
+.gamer-hero {
+  background: linear-gradient(135deg, #2d114d, #1b1f3b, #38135f);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(164, 94, 255, 0.2);
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.hero p {
+  margin-bottom: 18px;
+  color: #d8c8ff;
 }
 
 .hero nav {
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .hero nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+}
+
+.hero nav a:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 18px;
+  border-radius: 12px;
+  min-width: 120px;
+  box-shadow: 0 0 15px rgba(168, 92, 255, 0.15);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #caa6ff;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #e7dcff;
+  margin-top: 5px;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 950px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  padding: 22px;
   margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
-.links a {
+.card h2,
+.card h3 {
+  margin-top: 0;
+  color: #f4ddff;
+}
+
+.highlight-card {
+  border: 1px solid rgba(197, 125, 255, 0.35);
+  box-shadow: 0 0 20px rgba(180, 95, 255, 0.18);
+}
+
+.links a,
+.main-btn {
   display: inline-block;
   margin-right: 10px;
   margin-top: 10px;
-  background: #202938;
+  background: linear-gradient(135deg, #8e3dff, #5f2de0);
   color: white;
-  padding: 10px 14px;
-  border-radius: 6px;
+  padding: 11px 16px;
+  border-radius: 8px;
   text-decoration: none;
+  border: none;
+}
+
+.links a:hover,
+.main-btn:hover {
+  opacity: 0.92;
+}
+
+.event-list {
+  display: grid;
+  gap: 12px;
+}
+
+.event-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #a855f7;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.post-list li {
+  margin-bottom: 10px;
 }
 
 .form-card form {
@@ -61,37 +149,48 @@ label {
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #f3e9ff;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c8b9e5;
 }
 
 button {
   margin-top: 15px;
   padding: 12px;
-  background: #202938;
+  background: linear-gradient(135deg, #8e3dff, #5f2de0);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #202938;
-  color: white;
+  background: #140b23;
+  color: #e7dcff;
   margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-#loginMessage, #postMessage {
+#loginMessage,
+#postMessage {
   margin-top: 15px;
   font-weight: bold;
 }
@@ -101,4 +200,91 @@ footer {
     display: block;
     margin: 8px 0;
   }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .links a,
+  .main-btn,
+  button {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}.login-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.login-helper {
+  color: #d8c8ff;
+  margin-bottom: 16px;
+}
+
+.demo-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #8e3dff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  color: #f2eaff;
+}.admin-summary h2 {
+  margin-bottom: 18px;
+}
+
+.admin-posts {
+  display: grid;
+  gap: 14px;
+}
+
+.saved-post {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #a855f7;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.saved-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.saved-post-header h3 {
+  margin: 0;
+  color: #f4ddff;
+}
+
+.saved-post-header span {
+  font-size: 0.9rem;
+  color: #d8c8ff;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d6d, #d7264d);
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+.empty-posts {
+  color: #d8c8ff;
 }
