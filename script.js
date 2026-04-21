@@ -29,6 +29,7 @@ const postForm = document.getElementById("postForm");
 const postMessage = document.getElementById("postMessage");
 const adminPosts = document.getElementById("adminPosts");
 const totalPosts = document.getElementById("totalPosts");
+const logoutBtn = document.getElementById("logoutBtn");
 
 function getSavedPosts() {
   const savedPosts = localStorage.getItem("streamerPosts");
@@ -64,8 +65,10 @@ function renderPosts() {
 
     article.innerHTML = `
       <div class="saved-post-header">
-        <h3>Publicación ${index + 1}</h3>
-        <span>${post.date}</span>
+        <div>
+          <h3>${post.title}</h3>
+          <span>${post.date}</span>
+        </div>
       </div>
       <p>${post.text}</p>
       <button class="delete-btn" data-index="${index}">Eliminar</button>
@@ -97,27 +100,39 @@ if (postForm) {
   postForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    const titleInput = document.getElementById("postTitle");
     const postTextInput = document.getElementById("postText");
+
+    const postTitle = titleInput.value.trim();
     const postText = postTextInput.value.trim();
 
-    if (postText.length > 0) {
-      const posts = getSavedPosts();
-      const currentDate = new Date().toLocaleString("es-MX");
-
-      posts.unshift({
-        text: postText,
-        date: currentDate,
-      });
-
-      savePosts(posts);
-      renderPosts();
-
-      postMessage.textContent = "Publicación guardada correctamente.";
-      postMessage.style.color = "#7CFC9A";
-      postTextInput.value = "";
-    } else {
-      postMessage.textContent = "Escribe una publicación antes de guardar.";
+    if (!postTitle || !postText) {
+      postMessage.textContent = "Completa título y contenido.";
       postMessage.style.color = "#ff6b6b";
+      return;
     }
+
+    const posts = getSavedPosts();
+    const currentDate = new Date().toLocaleString("es-MX");
+
+    posts.unshift({
+      title: postTitle,
+      text: postText,
+      date: currentDate,
+    });
+
+    savePosts(posts);
+    renderPosts();
+
+    postMessage.textContent = "Publicación guardada correctamente.";
+    postMessage.style.color = "#7CFC9A";
+    titleInput.value = "";
+    postTextInput.value = "";
+  });
+}
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", function () {
+    window.location.href = "login.html";
   });
 }

@@ -287,4 +287,63 @@ footer {
 
 .empty-posts {
   color: #d8c8ff;
+}.admin-summary h2 {
+  margin-bottom: 18px;
+}
+
+.admin-posts {
+  display: grid;
+  gap: 14px;
+}
+
+.saved-post {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #a855f7;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.saved-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.saved-post-header h3 {
+  margin: 0;
+  color: #f4ddff;
+}
+
+.saved-post-header span {
+  font-size: 0.9rem;
+  color: #d8c8ff;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d6d, #d7264d);
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+.empty-posts {
+  color: #d8c8ff;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #444, #222);
+}
+
+.secondary-btn:hover {
+  opacity: 0.9;
 }

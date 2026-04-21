@@ -35,17 +35,30 @@
     <section class="card form-card">
       <h2>Agregar publicación</h2>
       <p class="login-helper">
-        Escribe una actualización para mostrarla dentro de la comunidad.
+        Escribe un aviso, noticia o actualización para mostrarla dentro de la comunidad.
       </p>
 
       <form id="postForm">
-        <label for="postText">Texto de publicación</label>
+        <label for="postTitle">Título</label>
+        <input
+          type="text"
+          id="postTitle"
+          placeholder="Ej. Stream especial de fin de semana"
+          required
+        />
+
+        <label for="postText">Contenido</label>
         <textarea
           id="postText"
-          rows="4"
+          rows="5"
           placeholder="Escribe una actualización para tus seguidores..."
+          required
         ></textarea>
-        <button type="submit">Guardar publicación</button>
+
+        <div class="admin-actions">
+          <button type="submit">Guardar publicación</button>
+          <button type="button" id="logoutBtn" class="secondary-btn">Cerrar sesión</button>
+        </div>
       </form>
 
       <p id="postMessage"></p>
