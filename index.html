@@ -8,66 +8,91 @@
 </head>
 <body>
   <header class="hero gamer-hero">
-    <h1>Comunidad Streamer</h1>
-    <p>Contenido, comunidad y enlaces para seguir al creador.</p>
+    <div class="hero-content">
+      <span class="hero-badge">Sprint 3 actualizado</span>
+      <h1>Comunidad Streamer</h1>
+      <p>Contenido, eventos y publicaciones para mantener activa la comunidad de Lexard.</p>
 
-    <div class="hero-stats">
-      <div class="stat-box">
-        <span class="stat-number">12.4K</span>
-        <span class="stat-label">Seguidores</span>
+      <div class="hero-actions">
+        <a class="main-btn" href="https://www.twitch.tv/" target="_blank">Ver stream</a>
+        <a class="ghost-btn" href="login.html">Entrar al panel</a>
       </div>
-      <div class="stat-box">
-        <span class="stat-number">3</span>
-        <span class="stat-label">Streams por semana</span>
+
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-number">12.4K</span>
+          <span class="stat-label">Seguidores</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Streams por semana</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Comunidad activa</span>
+        </div>
       </div>
-      <div class="stat-box">
-        <span class="stat-number">24/7</span>
-        <span class="stat-label">Comunidad activa</span>
-      </div>
+
+      <nav class="main-nav">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
     </div>
-
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="login.html">Login</a>
-      <a href="admin.html">Admin</a>
-    </nav>
   </header>
 
   <main class="container">
-    <section class="card highlight-card">
-      <h2>Perfil del streamer</h2>
-      <p><strong>Nombre:</strong> Lexard</p>
-      <p><strong>Contenido:</strong> videojuegos, comunidad y directos.</p>
-      <p><strong>Horario:</strong> martes, jueves y sábado - 8:00 p.m.</p>
-      <p><strong>Estado actual:</strong> Stream especial de comunidad esta semana.</p>
-      <a class="main-btn" href="https://www.twitch.tv/" target="_blank">Ver stream</a>
-    </section>
-
-    <section class="card">
-      <h2>Comunidad</h2>
-      <div class="links">
-        <a href="https://www.twitch.tv/" target="_blank">Twitch</a>
-        <a href="https://discord.com/" target="_blank">Discord</a>
-        <a href="https://instagram.com/" target="_blank">Instagram</a>
+    <section class="card highlight-card streamer-card">
+      <div>
+        <span class="section-kicker">Perfil del creador</span>
+        <h2>Lexard</h2>
+        <p>Videojuegos, comunidad y directos con estilo gamer.</p>
+      </div>
+      <div class="profile-info">
+        <p><strong>Horario:</strong> martes, jueves y sábado - 8:00 p.m.</p>
+        <p><strong>Estado actual:</strong> Stream especial de comunidad esta semana.</p>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Próximos eventos</h2>
-      <div class="event-list">
-        <div class="event-item">
-          <h3>Stream de comunidad</h3>
-          <p>Sábado - 8:00 p.m.</p>
+    <section class="content-grid">
+      <article class="card">
+        <span class="section-kicker">Redes</span>
+        <h2>Comunidad</h2>
+        <p class="login-helper">Accesos rápidos para seguir al streamer y participar en la comunidad.</p>
+        <div class="links link-cards">
+          <a href="https://www.twitch.tv/" target="_blank"><strong>Twitch</strong><span>Directos</span></a>
+          <a href="https://discord.com/" target="_blank"><strong>Discord</strong><span>Chat</span></a>
+          <a href="https://instagram.com/" target="_blank"><strong>Instagram</strong><span>Fotos</span></a>
         </div>
-        <div class="event-item">
-          <h3>Charla con seguidores</h3>
-          <p>Domingo - 7:00 p.m.</p>
+      </article>
+
+      <article class="card">
+        <span class="section-kicker">Agenda</span>
+        <h2>Próximos eventos</h2>
+        <div class="event-list">
+          <div class="event-item">
+            <h3>Stream de comunidad</h3>
+            <p>Sábado - 8:00 p.m.</p>
+          </div>
+          <div class="event-item">
+            <h3>Charla con seguidores</h3>
+            <p>Domingo - 7:00 p.m.</p>
+          </div>
         </div>
-      </div>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>Publicaciones recientes</h2>
+    <section class="card posts-card">
+      <div class="card-title-row">
+        <div>
+          <span class="section-kicker">Actualizaciones</span>
+          <h2>Publicaciones recientes</h2>
+        </div>
+        <span class="status-pill">Conectado al panel admin</span>
+      </div>
+      <p class="login-helper">
+        Aquí se muestran las publicaciones creadas desde el panel administrativo.
+      </p>
       <ul id="posts" class="post-list">
         <li>Nuevo stream programado para este sábado.</li>
         <li>Directo especial de comunidad esta semana.</li>

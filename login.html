@@ -7,18 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero gamer-hero">
-    <h1>Iniciar sesión</h1>
-    <p>Accede al panel de comunidad y administración.</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="login.html">Login</a>
-      <a href="admin.html">Admin</a>
-    </nav>
+  <header class="hero gamer-hero compact-hero">
+    <div class="hero-content">
+      <span class="hero-badge">Acceso administrativo</span>
+      <h1>Iniciar sesión</h1>
+      <p>Accede al panel para administrar publicaciones de la comunidad.</p>
+
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a class="active" href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="container login-layout">
     <section class="card form-card login-card">
+      <span class="section-kicker">Panel privado</span>
       <h2>Acceso al sistema</h2>
       <p class="login-helper">
         Usa tu correo y contraseña para ingresar al panel del streamer.
@@ -46,11 +51,19 @@
           required
         />
 
-        <button type="submit">Entrar</button>
+        <button type="submit">Entrar al panel</button>
       </form>
 
       <p id="loginMessage"></p>
     </section>
+
+    <aside class="card side-note">
+      <span class="section-kicker">Mejora Sprint 3</span>
+      <h2>Acceso protegido</h2>
+      <p>
+        Si alguien intenta abrir el panel administrativo directamente, el sistema lo redirige primero a esta pantalla de inicio de sesión.
+      </p>
+    </aside>
   </main>
 
   <footer>

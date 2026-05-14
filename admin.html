@@ -7,19 +7,30 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero gamer-hero">
-    <h1>Panel de administración</h1>
-    <p>Gestiona publicaciones y mantén activa la comunidad.</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="login.html">Login</a>
-      <a href="admin.html">Admin</a>
-    </nav>
+  <header class="hero gamer-hero compact-hero">
+    <div class="hero-content">
+      <span class="hero-badge">Panel protegido</span>
+      <h1>Panel de administración</h1>
+      <p>Gestiona publicaciones y mantén activa la comunidad.</p>
+
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="login.html">Login</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
     <section class="card admin-summary">
-      <h2>Resumen del panel</h2>
+      <div class="card-title-row">
+        <div>
+          <span class="section-kicker">Resumen</span>
+          <h2>Estado del panel</h2>
+        </div>
+        <span class="status-pill">Sesión iniciada</span>
+      </div>
+
       <div class="hero-stats">
         <div class="stat-box">
           <span class="stat-number" id="totalPosts">0</span>
@@ -29,46 +40,60 @@
           <span class="stat-number">Activo</span>
           <span class="stat-label">Estado del panel</span>
         </div>
-      </div>
-    </section>
-
-    <section class="card form-card">
-      <h2>Agregar publicación</h2>
-      <p class="login-helper">
-        Escribe un aviso, noticia o actualización para mostrarla dentro de la comunidad.
-      </p>
-
-      <form id="postForm">
-        <label for="postTitle">Título</label>
-        <input
-          type="text"
-          id="postTitle"
-          placeholder="Ej. Stream especial de fin de semana"
-          required
-        />
-
-        <label for="postText">Contenido</label>
-        <textarea
-          id="postText"
-          rows="5"
-          placeholder="Escribe una actualización para tus seguidores..."
-          required
-        ></textarea>
-
-        <div class="admin-actions">
-          <button type="submit">Guardar publicación</button>
-          <button type="button" id="logoutBtn" class="secondary-btn">Cerrar sesión</button>
+        <div class="stat-box">
+          <span class="stat-number">CRUD</span>
+          <span class="stat-label">Agregar, editar y eliminar</span>
         </div>
-      </form>
-
-      <p id="postMessage"></p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Publicaciones guardadas</h2>
-      <div id="adminPosts" class="admin-posts">
-        <p class="empty-posts">Aún no hay publicaciones registradas.</p>
-      </div>
+    <section class="admin-grid">
+      <section class="card form-card">
+        <span class="section-kicker">Gestión de contenido</span>
+        <h2 id="formTitle">Agregar publicación</h2>
+        <p class="login-helper">
+          Escribe un aviso, noticia o actualización para mostrarla dentro de la comunidad.
+        </p>
+
+        <form id="postForm">
+          <label for="postTitle">Título</label>
+          <input
+            type="text"
+            id="postTitle"
+            placeholder="Ej. Stream especial de fin de semana"
+            required
+          />
+
+          <label for="postText">Contenido</label>
+          <textarea
+            id="postText"
+            rows="5"
+            placeholder="Escribe una actualización para tus seguidores..."
+            required
+          ></textarea>
+
+          <div class="admin-actions">
+            <button type="submit" id="savePostBtn">Guardar publicación</button>
+            <button type="button" id="cancelEditBtn" class="secondary-btn hidden">Cancelar edición</button>
+            <button type="button" id="logoutBtn" class="secondary-btn">Cerrar sesión</button>
+          </div>
+        </form>
+
+        <p id="postMessage"></p>
+      </section>
+
+      <section class="card">
+        <div class="card-title-row">
+          <div>
+            <span class="section-kicker">Contenido guardado</span>
+            <h2>Publicaciones</h2>
+          </div>
+          <span class="status-pill">Visible en inicio</span>
+        </div>
+        <div id="adminPosts" class="admin-posts">
+          <p class="empty-posts">Aún no hay publicaciones registradas.</p>
+        </div>
+      </section>
     </section>
   </main>
 
